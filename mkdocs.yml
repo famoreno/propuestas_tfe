@@ -1,0 +1,85 @@
+site_name: famoreno - Propuestas de TFE
+site_url: https://famoreno.github.io/propuestas_tfe/
+
+theme:
+  name: material
+  language: es
+  #custom_dir: docs/overrides
+  #logo: images/_resource/logo_auto_isa_team.png
+  #favicon: images/_resource/logo_auto_isa_team.png
+
+  palette:
+    - scheme: default
+      primary: custom #002e5d #blue grey
+      # accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Modo oscuro
+    - scheme: slate
+      primary: custom #002e5d  #blue grey
+      # accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+
+  font:
+    text: IBM Plex Sans # Roboto
+    code: IBM Plex Mono # Roboto Mono
+
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - 🏠 Inicio: index.md
+  - ℹ️ Información general: contenidos/index.md # introducción, normativa, plantilla latex overleaf
+  - 🤖 Robótica móvil: contenidos/robotica/index.md
+  - 🦾 Automatización: contenidos/automatizacion/index.md
+  - 📷 Visión por Computador: contenidos/vision/index.md
+  - 🏥 Salud: contenidos/salud/index.md
+  - 🕰️ Antiguos: contenidos/antiguos/index.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.snippets:
+      check_paths: true
+      base_path: !relative $docs_dir
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tasklist:
+      clickable_checkbox: true
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/famoreno/propuestas_tfe
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/ui-course.js
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
