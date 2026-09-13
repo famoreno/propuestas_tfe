@@ -1,9 +1,7 @@
-Listado de propuestas de visión:
+# Visión artificial
 
-#### TFG
+Propuestas relacionadas con procesamiento de imágenes, percepción visual, aprendizaje automático y aplicaciones de visión artificial.
 
-- Por determinar.
+{{ project_cards("vision") }}
 
-#### TFM
-
-- Por determinar.
+[← Atrás](../../index.md)

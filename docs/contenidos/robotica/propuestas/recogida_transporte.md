@@ -1,4 +1,21 @@
-# Sistema de recogida, transporte y entrega de paquetes con robot móvil
+---
+title: Robot móvil autónomo para servicios de intralogística y entrega inteligente
+order: 1
+type: TFG
+status: disponible
+keywords:
+  - ROS 2
+  - Programación
+  - Navegación
+  - Visión artificial
+  - MQTT
+  - Arduino
+summary: Robot móvil autónomo capaz de recoger, transportar y entregar paquetes de forma segura tras autenticar al destinatario.
+---
+
+# {{ title }} {.project-title}
+
+{{ project_header() }}
 
 ## Descripción
 
@@ -12,18 +29,40 @@ El objetivo general de este proyecto es el desarrollo e integración de un siste
 - Implementación del módulo de autenticación del usuario destinatario (visión artificial para QR/caras y/o interacción por habla).
 - Validación experimental del ciclo completo de recogida, transporte y entrega en un entorno controlado de laboratorio.
 
-## Grados
+## Titulaciones recomendadas
 
-- GIERM, GIEI y GITI.
+- Grado en Ingeniería Electrónica, Robótica y Mecatrónica (GIERM).
+- Grado en Ingeniería Electrónica Industrial (GIEI).
+- Grado en Ingeniería en Tecnologías Industriales (GITI).
 
-## Conocimientos previos
+## Conocimientos recomendados
 
-ROS2 (Robot Operating System 2), programación en Python y/o C++, navegación autónoma de robots móviles, gestión de códigos QR, protocolos de comunicación (MQTT), conocimientos básicos de visión artificial y sistemas de reconocimiento facial/de habla.
+Se valorarán conocimientos en:
+
+- ROS 2;
+- programación en Python y/o C++;
+- navegación autónoma de robots móviles;
+- gestión de códigos QR;
+- protocolos de comunicación (MQTT);
+- visión artificial;
+- reconocimiento facial y/o de habla.
 
 ## Software
 
-ROS2 (Humble/Jazzy), OpenCV / OpenCV-Python, Mosquitto MQTT Broker, librerías de IA/reconocimiento (e.g., `face_recognition`, Whisper/Vosk), Sistema Operativo Linux (Ubuntu 22.04/24.04 LTS).
+`Ubuntu Linux` `ROS 2` `OpenCV` `Mosquitto MQTT Broker` `Whisper` `face_recognition`
 
 ## Hardware
 
-Plataforma robótica móvil preexistente (con LiDAR y encoders), compartimento con cerradura/actuador electromecánico, controlador de cerradura (ESP32 / Arduino / Raspberry Pi), cámara RGB / RGB-D, micrófono y altavoz.
+- Plataforma robótica móvil preexistente (con LiDAR y encoders)
+- Compartimento con cerradura/actuador electromecánico
+- Controlador de cerradura (ESP32 / Arduino / Raspberry Pi)
+- Cámara RGB / RGB-D
+- Micrófono y altavoz.
+
+<div class="project-contact" markdown>
+
+### ¿Te interesa?
+
+Si tienes interés en este trabajo, contáctame por <a href="mailto:famoreno@uma.es?Subject=Interés%20en%20TFE">correo electrónico</a> para comentar el proyecto y valorar su adecuación a tu perfil.
+
+</div>

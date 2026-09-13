@@ -1,4 +1,20 @@
-# Realidad Aumentada para monitorización de datos de estaciones FMS-200 en dispositivos móviles
+---
+title: Realidad Aumentada para monitorización de datos de estaciones FMS-200 en dispositivos móviles
+order: 2
+type: TFG
+status: disponible
+keywords:
+  - Realidad aumentada
+  - FMS-200
+  - Monitorización
+  - MQTT
+  - Visión artificial
+summary: Desarrollo de una aplicación de realidad aumentada para visualizar información de las estaciones FMS-200 desde dispositivos móviles.
+---
+
+# {{ title }} {.project-title}
+
+{{ project_header() }}
 
 ## Descripción
 
@@ -12,18 +28,36 @@ El proyecto aborda la creación de un sistema de supervisión en planta basado e
 - Diseño de una interfaz HMI inmersiva e intuitiva para la representación de datos de telemetría en tiempo real.
 - Evaluación de latencias, consumo de recursos y precisión del seguimiento visual en el entorno de taller/laboratorio.
 
-## Grados
+## Titulaciones recomendadas
 
-- GIERM, GIEI y GITI.
+- Grado en Ingeniería Electrónica, Robótica y Mecatrónica (GIERM).
+- Grado en Ingeniería Electrónica Industrial (GIEI).
+- Grado en Ingeniería en Tecnologías Industriales (GITI).
 
-## Conocimientos previos
+## Conocimientos recomendados
 
-Visión artificial y fundamentos de Realidad Aumentada (ARCore / AR Foundation), comunicaciones por protocolo MQTT, programación de PLCs en TwinCAT 3, desarrollo de aplicaciones móviles (Android con Kotlin/Java o C# en Unity).
+Se valorarán conocimientos en:
+
+- visión artificial y fundamentos de realidad aumentada (ARCore / AR Foundation);
+- comunicaciones mediante el protocolo MQTT;
+- programación de PLCs en TwinCAT 3;
+- desarrollo de aplicaciones móviles (Android con Kotlin/Java o C# en Unity).
 
 ## Software
 
-Android Studio (o Unity con SDK ARCore), OpenCV, Broker MQTT (Mosquitto), Beckhoff TwinCAT 3 (módulo TF6701 MQTT / ADS).
+`Android Studio / Unity` `ARCore / AR Foundation` `OpenCV` `Mosquitto MQTT` `TwinCAT 3`
 
 ## Hardware
 
-Dispositivo móvil / Tablet Android compatible con ARCore y cámara HD, estaciones del sistema SMC FMS-200, PLC Beckhoff con interfaz Ethernet, punto de acceso / router Wi-Fi.
+- Dispositivo móvil o tableta Android compatible con ARCore y cámara HD.
+- Estaciones del sistema SMC FMS-200.
+- PLC Beckhoff con interfaz Ethernet.
+- Punto de acceso o router Wi-Fi.
+
+<div class="project-contact" markdown>
+
+### ¿Te interesa?
+
+Si tienes interés en este trabajo, contáctame por <a href="mailto:famoreno@uma.es?Subject=Interés%20en%20TFE">correo electrónico</a> para comentar el proyecto y valorar su adecuación a tu perfil.
+
+</div>

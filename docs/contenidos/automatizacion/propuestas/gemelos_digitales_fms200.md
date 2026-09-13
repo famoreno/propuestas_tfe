@@ -1,8 +1,36 @@
-# Gemelos Digitales en Godot de las estaciones del sistema FMS-200
+---
+title: Gemelos Digitales en Godot de las estaciones del sistema FMS-200
+order: 1
+type: TFG
+status: parcial
+keywords:
+  - Gemelos digitales
+  - Diseño 3D
+  - Godot
+  - TwinCAT 3
+  - ADS
+  - FMS-200
+summary: Desarrollo de gemelos digitales interactivos de distintas estaciones del sistema didáctico FMS-200.
+variants:
+  - name: FMS-201
+    status: completado
+  - name: FMS-202
+    status: disponible
+  - name: FMS-205
+    status: disponible
+  - name: FMS-206
+    status: disponible
+  - name: FMS-208
+    status: disponible
+---
+
+# {{ title }} {.project-title}
+
+{{ project_header() }}
 
 ## Descripción
 
-Este TFG tiene como finalidad el diseño, desarrollo e implementación de Gemelos Digitales (*Digital Twins*) interactivos en tiempo real para las estaciones del [sistema modular de fabricación flexible SMC FMS-200](../../../pdf/FMS_200_Descripcion_Funcional.pdf). Utilizando el motor gráfico Godot Engine y modelos 3D creados en FreeCAD, se construirá una representación tridimensional cinemática del sistema. El entorno virtual se comunicará bidireccionalmente con el PLC físico mediante Beckhoff TwinCAT 3, permitiendo reflejar el estado real de la planta, simular secuencias de control y realizar validaciones sin riesgo para el equipamiento físico.
+Este TFG tiene como finalidad el diseño, desarrollo e implementación de Gemelos Digitales (*Digital Twins*) interactivos en tiempo real para las estaciones del [sistema modular de fabricación flexible SMC FMS-200](../../../pdf/FMS_200_Descripcion_Funcional.pdf){:target="_blank"}. Utilizando el motor gráfico Godot Engine y modelos 3D creados en FreeCAD, se construirá una representación tridimensional cinemática del sistema. El entorno virtual se comunicará bidireccionalmente con el PLC físico mediante Beckhoff TwinCAT 3, permitiendo reflejar el estado real de la planta, simular secuencias de control y realizar validaciones sin riesgo para el equipamiento físico.
 
 ## Objetivos
 
@@ -12,18 +40,35 @@ Este TFG tiene como finalidad el diseño, desarrollo e implementación de Gemelo
 - Sincronización bidireccional de señales de E/S (sensores y actuadores) entre el PLC físico y el modelo 3D.
 - Ensayos de validación del Gemelo Digital mediante la ejecución de rutinas completas de automatización.
 
-## Grados
+## Titulaciones recomendadas
 
-- GIERM, GIEI y GITI.
+- Grado en Ingeniería Electrónica, Robótica y Mecatrónica (GIERM).
+- Grado en Ingeniería Electrónica Industrial (GIEI).
+- Grado en Ingeniería en Tecnologías Industriales (GITI).
 
-## Conocimientos previos
+## Conocimientos recomendados
 
-Programación estructurada / orientada a objetos (GDScript en Godot o C#), programación de PLCs en TwinCAT 3 (lenguajes IEC 61131-3), diseño y modelado 3D paramétrico con FreeCAD, fundamentos de comunicaciones industriales.
+Se valorarán conocimientos en:
+
+- programación estructurada y orientada a objetos (GDScript en Godot o C#);
+- programación de PLCs en TwinCAT 3 y lenguajes IEC 61131-3;
+- diseño y modelado 3D paramétrico con FreeCAD;
+- comunicaciones industriales.
 
 ## Software
 
-Godot Engine (v4.x), Beckhoff TwinCAT 3, FreeCAD (y/o Blender para optimización de mallas), conectores de comunicación ADS.
+`Godot Engine` `TwinCAT 3` `FreeCAD / Solidworks` `ADS`
 
 ## Hardware
 
-Estaciones de fabricación flexible SMC FMS-200, PLC / Controlador industrial Beckhoff (o PC de control compatible), equipo informático para diseño 3D.
+- Estaciones de fabricación flexible SMC FMS-200.
+- PLC o controlador industrial Beckhoff (o PC de control compatible).
+- Equipo informático para diseño 3D.
+
+<div class="project-contact" markdown>
+
+### ¿Te interesa?
+
+Si tienes interés en este trabajo, contáctame por <a href="mailto:famoreno@uma.es?Subject=Interés%20en%20TFE">correo electrónico</a> para comentar el proyecto y valorar su adecuación a tu perfil.
+
+</div>

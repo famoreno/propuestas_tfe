@@ -1,9 +1,7 @@
-Listado de propuestas de salud:
+# Salud
 
-#### TFG
+Propuestas relacionadas con la aplicación de sistemas de ingeniería, sensorización, análisis de datos y tecnologías inteligentes en el ámbito de la salud.
 
-- Por determinar.
+{{ project_cards("salud") }}
 
-#### TFM
-
-- Por determinar.
+[← Atrás](../../index.md)
