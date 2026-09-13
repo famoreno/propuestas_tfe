@@ -1,34 +1,24 @@
-site_name: famoreno - Propuestas de TFE
+site_name: Trabajos Fin Estudios
 site_url: https://famoreno.github.io/propuestas_tfe/
 
 theme:
   name: material
   language: es
-  #custom_dir: docs/overrides
-  #logo: images/_resource/logo_auto_isa_team.png
-  #favicon: images/_resource/logo_auto_isa_team.png
+  custom_dir: docs/overrides
+  # logo: material/school
+  # favicon: material/school
 
   palette:
     - scheme: default
-      primary: custom #002e5d #blue grey
-      # accent: indigo
-      toggle:
-        icon: material/weather-night
-        name: Modo oscuro
-    - scheme: slate
-      primary: custom #002e5d  #blue grey
-      # accent: indigo
-      toggle:
-        icon: material/weather-sunny
-        name: Modo claro
+      primary: custom 
+      accent: custom
 
   font:
-    text: IBM Plex Sans # Roboto
-    code: IBM Plex Mono # Roboto Mono
+    text: IBM Plex Sans
+    code: IBM Plex Mono
 
   features:
     - navigation.sections
-    - navigation.expand
     - navigation.top
     - navigation.tracking
     - toc.follow
@@ -37,13 +27,14 @@ theme:
     - content.code.copy
 
 nav:
-  - 🏠 Inicio: index.md
-  - ℹ️ Información general: contenidos/index.md # introducción, normativa, plantilla latex overleaf
-  - 🤖 Robótica móvil: contenidos/robotica/index.md
-  - 🦾 Automatización: contenidos/automatizacion/index.md
-  - 📷 Visión por Computador: contenidos/vision/index.md
-  - 🏥 Salud: contenidos/salud/index.md
-  - 🕰️ Antiguos: contenidos/antiguos/index.md
+  - "Inicio": index.md
+  - "Información general": contenidos/index.md # introducción, normativa, plantilla latex overleaf
+  - "Líneas":
+    - "Robótica móvil": contenidos/robotica/index.md
+    - "Automatización industrial": contenidos/automatizacion/index.md
+    - "Visión artificial": contenidos/vision/index.md
+    - "Salud": contenidos/salud/index.md
+    - "Archivo": contenidos/archivo/index.md
 
 markdown_extensions:
   - admonition
@@ -67,9 +58,13 @@ markdown_extensions:
       generic: true
   - pymdownx.tasklist:
       clickable_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 plugins:
   - search
+  - macros
 
 extra:
   social:
@@ -78,6 +73,7 @@ extra:
 
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/tfe.css
 
 extra_javascript:
   - javascripts/ui-course.js
