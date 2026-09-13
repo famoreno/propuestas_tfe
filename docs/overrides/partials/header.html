@@ -1,0 +1,52 @@
+<header class="md-header tfe-header" data-md-component="header">
+
+  <div class="md-header__inner md-grid tfe-header__inner">
+
+    <label
+      class="md-header__button md-icon tfe-mobile-menu"
+      for="__drawer"
+    >
+      {% set icon = config.theme.icon.menu or "material/menu" %}
+      {% include ".icons/" ~ icon ~ ".svg" %}
+    </label>
+
+    <!-- Identidad -->
+    <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}"
+       class="tfe-brand">
+
+      <div class="tfe-brand__name">
+        <span>F. A. MORENO</span>
+        <strong>PROPUESTAS TFE</strong>
+      </div>
+
+      <div class="tfe-brand__separator"></div>
+
+      <div class="tfe-brand__affiliation">
+        <span>Ingeniería de Sistemas y Automática</span>
+        <span>Escuela de Ingenierías Industriales</span>
+        <span>Universidad de Málaga</span>
+      </div>
+    </a>
+
+    <!-- Navegación superior -->
+    <nav class="tfe-header__nav">
+      <a href="{{ nav.homepage.url | url }}">Inicio</a>
+      <a href="{{ 'contenidos/' | url }}">Información</a>
+
+      <label
+        class="md-header__button md-icon tfe-search-button"
+        for="__search"
+        title="Buscar"
+        aria-label="Buscar"
+      >
+        {% set icon = config.theme.icon.search or "material/magnify" %}
+        {% include ".icons/" ~ icon ~ ".svg" %}
+      </label>
+    </nav>
+
+    <!-- Conservamos el buscador de Material -->
+    {% include "partials/search.html" %}
+
+  </div>
+
+</header>
