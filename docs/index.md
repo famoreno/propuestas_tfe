@@ -1,34 +1,40 @@
-# Propuestas de Trabajos Fin de Estudios
+# Propuestas de TFE
 
-## Bienvenida
+<!-- Propuestas de TFG y TFM en Ingeniería de Sistemas y Automática. -->
+[Información general →](contenidos/index.md){ .tfe-info-button }
 
-Bienvenido/a a este portal de información sobre TFEs tutorizados por el profesor Francisco Ángel Moreno (**famoreno**), de la Universidad de Málaga.
+## Líneas
 
-Aquí encontrarás:
+<div class="tfe-grid">
 
-- Propuestas de **Trabajos de Fin de Grado** en diferentes áreas: Robótica, Automatización Industrial, Visión Artificial, Salud y proyectos anteriores.
-- Propuestas de **Trabajos de Fin de Máster** en diferentes áreas: Robótica, Automatización Industrial y Visión, así como proyectos anteriores.
+  <a class="tfe-card tfe-robotica" href="contenidos/robotica/">
+    <span class="tfe-card-number">01</span>
+    <h3>Robótica móvil</h3>
+    <p>Navegación, percepción y sistemas robóticos móviles.</p>
+  </a>
 
-Usa el menú lateral y el buscador para navegar rápidamente.
+  <a class="tfe-card tfe-automatizacion" href="contenidos/automatizacion/">
+    <span class="tfe-card-number">02</span>
+    <h3>Automatización industrial</h3>
+    <p>PLC, control industrial, supervisión y gemelos digitales.</p>
+  </a>
 
-## Información general
+  <a class="tfe-card tfe-vision" href="contenidos/vision/">
+    <span class="tfe-card-number">03</span>
+    <h3>Visión por computador</h3>
+    <p>Procesamiento de imágenes, percepción visual y aprendizaje automático.</p>
+  </a>
 
-[Información general](contenidos/index.md)
+  <a class="tfe-card tfe-salud" href="contenidos/salud/">
+    <span class="tfe-card-number">04</span>
+    <h3>Salud</h3>
+    <p>Tecnologías de ingeniería aplicadas al ámbito de la salud.</p>
+  </a>
 
----
+  <a class="tfe-card tfe-antiguos" href="contenidos/archivo/">
+    <span class="tfe-card-number">05</span>
+    <h3>Archivo</h3>
+    <p>Propuestas y trabajos de cursos anteriores.</p>
+  </a>
 
-## Propuestas de Trabajos de Fin de Estudios
-
-!!! info "Estados"
-    Los trabajos podrán estar en uno de estos estados
-
-    - 🟢 sin candidato
-    - 🟡 con interesado/ofrecido
-    - 🔴 asignado
-    - ⚫ no disponible
-
-- [Robótica](contenidos/robotica/index.md)
-- [Automatización Industrial](contenidos/automatizacion/index.md)
-- [Visión Artificial](contenidos/vision/index.md)
-- [Salud](contenidos/salud/index.md)
-- [Proyectos Antiguos](contenidos/antiguos/index.md)
+</div>
