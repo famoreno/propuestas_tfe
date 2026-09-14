@@ -1,5 +1,5 @@
 ---
-title: Robot móvil autónomo para servicios de intralogística y entrega inteligente
+title: Servicios de intralogística y entrega inteligente para un robot móvil autónomo 
 order: 1
 type: TFG
 status: disponible
@@ -10,7 +10,7 @@ keywords:
   - Visión artificial
   - MQTT
   - Arduino
-summary: Robot móvil autónomo capaz de recoger, transportar y entregar paquetes de forma segura tras autenticar al destinatario.
+summary: Sistema de recogida, transporte y entrega autenticada de paquetes para robot móvil autónomo.
 ---
 
 # {{ title }} {.project-title}

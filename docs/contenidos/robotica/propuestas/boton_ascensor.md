@@ -1,5 +1,5 @@
 ---
-title: Robot móvil autónomo para la interacción con ascensores mediante visión artificial
+title: Sistema de interacción con ascensores mediante visión artificial para robot móvil autónomo.
 order: 2
 type: TFG
 status: disponible
@@ -9,7 +9,7 @@ keywords:
   - Navegación
   - Visión artificial
   - OCR
-summary: Robot móvil autónomo capaz de reconocer y pulsar botones de ascensor mediante visión artificial para desplazarse entre plantas.
+summary: Desarrollo de un sistema de visión artificial y manipulación para reconocer y pulsar botones de ascensor para un robot móvil autónomo.
 ---
 
 # {{ title }} {.project-title}
