@@ -88,7 +88,6 @@ def define_env(env):
 """
 
         prefix = CATEGORY_PREFIX.get(category, "TFG")
-        print(prefix)
 
         result = ['<div class="project-grid">']
 
