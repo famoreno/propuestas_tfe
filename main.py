@@ -17,7 +17,7 @@ def define_env(env):
     STATUS = {
         "disponible": ("DISPONIBLE", "status-free"),
         "asignado": ("ASIGNADO", "status-assigned"),
-        "pendiente": ("PENDIENTE", "status-pending"),
+        "solicitado": ("SOLICITADO", "status-requested"),
         "completado": ("COMPLETADO", "status-closed"),
         "parcial": ("VARIAS OPCIONES", "status-parcial"),
     }

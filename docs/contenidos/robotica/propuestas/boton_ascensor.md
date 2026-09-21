@@ -2,7 +2,7 @@
 title: Sistema de interacción con ascensores mediante visión artificial para robot móvil autónomo.
 order: 2
 type: TFG
-status: disponible
+status: solicitado # paula mancilla
 keywords:
   - ROS 2
   - Programación
