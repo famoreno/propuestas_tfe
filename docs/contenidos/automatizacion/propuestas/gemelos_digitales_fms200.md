@@ -15,11 +15,11 @@ variants:
   - name: FMS-201
     status: completado
   - name: FMS-202
-    status: disponible
+    status: solicitado # sofia borregon
   - name: FMS-205
     status: disponible
   - name: FMS-206
-    status: disponible
+    status: solicitado # eva torres lopez
   - name: FMS-208
     status: disponible
 ---
