@@ -1,12 +1,12 @@
-site_name: Trabajos Fin Estudios
+site_name: famoreno - TFEs
 site_url: https://famoreno.github.io/propuestas_tfe/
 
 theme:
   name: material
   language: es
   custom_dir: docs/overrides
-  # logo: material/school
-  # favicon: material/school
+  logo: images/_resource/famorenologo.png
+  favicon: images/_resource/famorenologo.png
 
   palette:
     - scheme: default
@@ -73,7 +73,6 @@ extra:
 
 extra_css:
   - stylesheets/extra.css
-  - stylesheets/tfe.css
 
 extra_javascript:
   - javascripts/ui-course.js
