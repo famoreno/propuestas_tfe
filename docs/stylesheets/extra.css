@@ -867,3 +867,140 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* =====================================================
+   ARCHIVO DE TFE
+   ===================================================== */
+
+.archive-table {
+  width: 100%;
+  margin-top: 1.5rem;
+  overflow: visible;
+}
+
+.archive-table table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  background: transparent;
+  font-size: .75rem;
+}
+
+/* ---------- Cabecera ---------- */
+
+.archive-table thead {
+  background: var(--tfe-red);
+}
+
+.archive-table th {
+  padding: .55rem .7rem;
+
+  background: var(--tfe-red) !important;
+  color: var(--tfe-paper-light) !important;
+
+  border: 0;
+
+  font-family: var(--tfe-font-display);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+/* La cabecera ocupa exactamente el mismo ancho que las filas */
+.archive-table th:first-child {
+  border-left: 4px solid var(--tfe-red);
+}
+
+/* ---------- Anchos de columnas ---------- */
+
+.archive-table th:nth-child(1),
+.archive-table td:nth-child(1) {
+  width: 3.5rem;
+}
+
+.archive-table th:nth-child(2),
+.archive-table td:nth-child(2) {
+  width: 72%;
+}
+
+.archive-table th:nth-child(3),
+.archive-table td:nth-child(3) {
+  width: 3.5rem;
+}
+
+.archive-table th:nth-child(4),
+.archive-table td:nth-child(4) {
+  width: 3.5rem;
+}
+
+/* ---------- Celdas ---------- */
+.archive-table td {
+  padding: .65rem .7rem;
+
+  border-bottom: 1px solid var(--tfe-border);
+
+  color: var(--tfe-ink);
+  vertical-align: middle;
+}
+
+/* Borde identificativo de cada línea */
+
+.archive-table tbody tr td:first-child {
+  border-left: 4px solid transparent;
+}
+
+.archive-table tr.archive-robotica td:first-child {
+  border-left-color: var(--tfe-robotica);
+}
+
+.archive-table tr.archive-automatizacion td:first-child {
+  border-left-color: var(--tfe-automatizacion);
+}
+
+.archive-table tr.archive-vision td:first-child {
+  border-left-color: var(--tfe-vision);
+}
+
+.archive-table tr.archive-salud td:first-child {
+  border-left-color: var(--tfe-salud);
+}
+
+.archive-table td:first-child,
+.archive-table td:last-child {
+  font-family: var(--tfe-font-display);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.archive-table td:last-child {
+  text-align: center;
+}
+
+/* Separación entre cursos académicos */
+.archive-table tbody tr.archive-new-year td {
+  border-top: 2px solid var(--tfe-ink);
+  padding-top: .85rem;
+}
+
+/* El primer curso no necesita separación adicional */
+.archive-table tbody tr.archive-new-year:first-child td {
+  border-top: 0;
+  padding-top: .65rem;
+}
+
+@media screen and (max-width: 700px) {
+
+  .archive-table {
+    overflow-x: auto;
+  }
+
+  .archive-table table {
+    min-width: 650px;
+  }
+
+}
