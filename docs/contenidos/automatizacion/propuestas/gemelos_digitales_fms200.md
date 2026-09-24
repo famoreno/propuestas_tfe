@@ -19,7 +19,7 @@ variants:
   - name: FMS-205
     status: disponible
   - name: FMS-206
-    status: solicitado # eva torres lopez
+    status: asignado # eva torres lopez
   - name: FMS-208
     status: disponible
 ---
