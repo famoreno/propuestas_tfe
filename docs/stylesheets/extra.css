@@ -1004,3 +1004,9 @@ body {
   }
 
 }
+
+.md-sidebar .md-nav__title {
+  background-color: var(--tfe-red);
+  color: var(--tfe-paper);
+  box-shadow: 0 2px 4px rgba(161, 61, 45, 0.7);
+}
