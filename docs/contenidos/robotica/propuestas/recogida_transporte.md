@@ -2,7 +2,7 @@
 title: Servicios de intralogística y entrega inteligente para un robot móvil autónomo 
 order: 1
 type: TFG
-status: solicitado # liliya bakhurska
+status: asignado # liliya bakhurska
 keywords:
   - ROS 2
   - Programación
