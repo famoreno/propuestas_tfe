@@ -21,7 +21,7 @@
 
   <a class="tfe-card tfe-vision" href="contenidos/vision/">
     <span class="tfe-card-number">03</span>
-    <h3>Visión por computador</h3>
+    <h3>Visión artificial</h3>
     <p>Procesamiento de imágenes, percepción visual y aprendizaje automático.</p>
   </a>
 

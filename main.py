@@ -146,7 +146,7 @@ def define_env(env):
         <div class="tfe-card tfe-capacity">
 
         <div class="capacity-title">
-            CAPACIDAD DE TUTORIZACIÓN
+            CAPACIDAD
         </div>
 
         <div class="capacity-states">
@@ -169,7 +169,7 @@ def define_env(env):
         </div>
 
         <div class="capacity-total">
-            <span>CAPACIDAD</span>
+            <span>TOTAL</span>
             <strong>{capacity:g} / {max_capacity}</strong>
         </div>
 
