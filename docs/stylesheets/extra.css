@@ -691,12 +691,16 @@ body {
   color: #9a3d30;
 }
 
-.status-requested {
+.status-interested {
   color: #a8791f;
 }
 
 .status-closed {
   color: #6f6b64;
+}
+
+.status-requested {
+  color: #cf7026;
 }
 
 .project-header {
@@ -746,6 +750,19 @@ body {
 
 .project-variants > span:nth-child(odd) {
   align-self: center;
+}
+
+.project-variant-name {
+  display: flex;
+  align-items: baseline;
+  gap: .55rem;
+  min-width: 0;
+}
+
+.project-variant-cotutor {
+  color: var(--tfe-muted);
+  font-size: .68rem;
+  font-weight: 500;
 }
 
 .project-contact {
@@ -1009,4 +1026,103 @@ body {
   background-color: var(--tfe-red);
   color: var(--tfe-paper);
   box-shadow: 0 2px 4px rgba(161, 61, 45, 0.7);
+}
+
+/* =====================================================
+   CAPACIDAD DE TUTORIZACIÓN
+   ===================================================== */
+
+.tfe-capacity {
+  background: #e7eadf;
+  border-color: #737866;
+}
+
+.capacity-title {
+  margin-bottom: .75rem;
+
+  font-family: var(--tfe-font-display);
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  color: var(--tfe-ink);
+}
+
+.capacity-states {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  margin-bottom: .8rem;
+}
+
+.capacity-state {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+
+  font-family: var(--tfe-font-display);
+  font-size: .72rem;
+  line-height: 1;
+}
+
+.capacity-box {
+  display: inline-block;
+  width: .65rem;
+  height: .65rem;
+}
+
+/* Asignado */
+.capacity-box--assigned {
+  background: #64805c;
+}
+
+/* Solicitado */
+.capacity-box--requested {
+  background: #c4a64d;
+}
+
+/* Interesado */
+.capacity-box--interested {
+  background: #a85645;
+}
+
+.capacity-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  padding-top: .25rem;
+  border-top: 1px solid rgba(41, 40, 36, .25);
+
+  font-family: var(--tfe-font-display);
+  font-size: .72rem;
+  letter-spacing: .04em;
+}
+
+.capacity-total strong {
+  font-size: .9rem;
+}
+
+.capacity-bar {
+  width: 100%;
+  height: .25rem;
+  margin-top: .35rem;
+
+  background: rgba(41, 40, 36, .12);
+}
+
+.capacity-bar span {
+  display: block;
+  height: 100%;
+  background: #64805c;
+}
+
+.project-cotutor {
+  margin-left: .6rem;
+  padding-left: .6rem;
+  border-left: 1px solid var(--tfe-border);
+
+  font-family: var(--tfe-font-display);
+  font-size: .72rem;
+  font-weight: 500;
+  color: var(--tfe-muted);
 }

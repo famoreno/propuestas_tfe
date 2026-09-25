@@ -37,4 +37,6 @@
     <p>Propuestas y trabajos de cursos anteriores.</p>
   </a>
 
+  {{ capacity_card(5) }}
+
 </div>

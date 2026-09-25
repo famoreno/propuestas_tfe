@@ -18,6 +18,7 @@ def define_env(env):
         "disponible": ("DISPONIBLE", "status-free"),
         "asignado": ("ASIGNADO", "status-assigned"),
         "solicitado": ("SOLICITADO", "status-requested"),
+        "interesado": ("INTERESADO", "status-interested"),
         "completado": ("COMPLETADO", "status-closed"),
         "parcial": ("VARIAS OPCIONES", "status-parcial"),
     }
@@ -62,6 +63,123 @@ def define_env(env):
 
         return projects
 
+    def count_project_statuses(categories):
+
+            counts = {
+                "asignado": 0,
+                "solicitado": 0,
+                "interesado": 0,
+            }
+
+            for category in categories:
+                for project in load_projects(category):
+
+                    variants = project.get("variants", [])
+
+                    items = variants if variants else [project]
+
+                    for item in items:
+                        status = item.get("status", "disponible").lower()
+
+                        if status in counts:
+                            counts[status] += 1
+
+            return counts
+
+    def calculate_capacity(categories):
+
+        capacity = 0.0
+
+        for category in categories:
+            for project in load_projects(category):
+
+                variants = project.get("variants", [])
+
+                items = variants if variants else [project]
+
+                for item in items:
+
+                    status = item.get(
+                        "status",
+                        "disponible"
+                    ).lower()
+
+                    if status != "asignado":
+                        continue
+
+                    cotutor = item.get(
+                        "cotutor",
+                        project.get("cotutor")
+                    )
+
+                    if cotutor and str(cotutor).lower() != "none":
+                        capacity += 0.5
+                    else:
+                        capacity += 1.0
+
+        return capacity
+
+    @env.macro
+    def capacity_card(max_capacity=5):
+
+        categories = [
+            "robotica",
+            "automatizacion",
+            "vision",
+            "salud",
+        ]
+
+        counts = count_project_statuses(categories)
+
+        assigned = counts["asignado"]
+        requested = counts["solicitado"]
+        interested = counts["interesado"]
+
+        capacity = calculate_capacity(categories)
+
+        capacity_percent = min(
+            (capacity / max_capacity) * 100,
+            100
+        )
+
+        return dedent(f"""
+        <div class="tfe-card tfe-capacity">
+
+        <div class="capacity-title">
+            CAPACIDAD DE TUTORIZACIÓN
+        </div>
+
+        <div class="capacity-states">
+
+            <div class="capacity-state">
+            <span class="capacity-box capacity-box--assigned"></span>
+            <span><strong>{assigned}</strong> asignados</span>
+            </div>
+
+            <div class="capacity-state">
+            <span class="capacity-box capacity-box--requested"></span>
+            <span><strong>{requested}</strong> solicitados</span>
+            </div>
+
+            <div class="capacity-state">
+            <span class="capacity-box capacity-box--interested"></span>
+            <span><strong>{interested}</strong> interesados</span>
+            </div>
+
+        </div>
+
+        <div class="capacity-total">
+            <span>CAPACIDAD</span>
+            <strong>{capacity:g} / {max_capacity}</strong>
+        </div>
+
+        <div class="capacity-bar">
+            <span style="width: {capacity_percent}%"></span>
+        </div>
+
+        </div>
+        """).strip()
+    
     @env.macro
     def project_cards(category):
 
@@ -203,6 +321,7 @@ def define_env(env):
 
         project_type = metadata.get("type", "TFG")
         status_key = metadata.get("status", "disponible").lower()
+        cotutor = metadata.get("cotutor")
         keywords = metadata.get("keywords", [])
         variants = metadata.get("variants", [])
         order = metadata.get("order", 0)
@@ -221,6 +340,21 @@ def define_env(env):
         prefix = CATEGORY_PREFIX.get(category, "TFE")
 
         code = f"{prefix}-{order:02d}"
+
+        cotutor_html = ""
+
+        # En proyectos normales se muestra junto al código.
+        # En proyectos con variantes se muestra en cada variante.
+        if (
+            not variants
+            and cotutor
+            and str(cotutor).lower() != "none"
+        ):
+            cotutor_html = (
+                f'<span class="project-cotutor">'
+                f'Cotutor: {cotutor}'
+                f'</span>'
+            )
 
         status_text, status_class = STATUS.get(
             status_key,
@@ -250,8 +384,30 @@ def define_env(env):
                     ("DISPONIBLE", "status-free")
                 )
 
+                # Cotutor específico de la variante.
+                # Si no está definido, hereda el cotutor general del proyecto.
+                variant_cotutor = variant.get(
+                    "cotutor",
+                    metadata.get("cotutor")
+                )
+
+                cotutor_variant_html = ""
+
+                if (
+                    variant_cotutor
+                    and str(variant_cotutor).lower() != "none"
+                ):
+                    cotutor_variant_html = (
+                        f'<span class="project-variant-cotutor">'
+                        f'Cotutor: {variant_cotutor}'
+                        f'</span>'
+                    )
+
                 rows.append(
+                    f'<div class="project-variant-name">'
                     f'<span>{variant_name}</span>'
+                    f'{cotutor_variant_html}'
+                    f'</div>'
                     f'<span class="project-status {variant_status_class}">'
                     f'{variant_status_text}'
                     f'</span>'
@@ -266,6 +422,7 @@ def define_env(env):
         return dedent(f"""
         <div class="project-header">
         <span class="project-code">{code}</span>
+        {cotutor_html}
         <span class="project-status {status_class}">{status_text}</span>
 
         <div class="project-header__tags">
