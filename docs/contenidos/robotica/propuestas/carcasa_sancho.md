@@ -2,7 +2,7 @@
 title: Diseño y prototipado de una carcasa funcional para un robot móvil
 order: 3
 type: TFG
-status: solicitado
+status: solicitado # Guillermo Ruiz Herrera
 keywords:
   - Diseño 3D
   - Materiales
