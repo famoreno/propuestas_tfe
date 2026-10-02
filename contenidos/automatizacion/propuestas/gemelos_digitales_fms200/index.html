@@ -1,0 +1,721 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://famoreno.github.io/propuestas_tfe/contenidos/automatizacion/propuestas/gemelos_digitales_fms200/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../images/_resource/famorenologo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Gemelos Digitales en Godot de las estaciones del sistema FMS-200 - famoreno - TFEs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gemelos-digitales-en-godot-de-las-estaciones-del-sistema-fms-200" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      <header class="md-header tfe-header" data-md-component="header">
+
+  <div class="md-header__inner md-grid tfe-header__inner">
+
+    <label
+      class="md-header__button md-icon tfe-mobile-menu"
+      for="__drawer"
+    >
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+
+    <!-- Identidad -->
+    <a href="../../../.."
+       class="tfe-brand">
+
+      <div class="tfe-brand__name">
+        <span>famoreno</span>
+        <strong>PROPUESTAS TFE</strong>
+      </div>
+
+      <div class="tfe-brand__separator"></div>
+
+      <div class="tfe-brand__affiliation">
+        <span>Ingeniería de Sistemas y Automática</span>
+        <span>Escuela de Ingenierías Industriales</span>
+        <span>Universidad de Málaga</span>
+      </div>
+
+      <div class="tfe-brand__separator"></div>
+    </a>
+
+    <!-- Navegación superior -->
+    <nav class="tfe-header__nav">
+      <a href="../../../..">Inicio</a>
+      <a href="../../../">Información</a>
+
+      <label
+        class="md-header__button md-icon tfe-search-button"
+        for="__search"
+        title="Buscar"
+        aria-label="Buscar"
+      >
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+    </nav>
+
+    <!-- Conservamos el buscador de Material -->
+    <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="famoreno - TFEs" class="md-nav__button md-logo" aria-label="famoreno - TFEs" data-md-component="logo">
+      
+  <img src="../../../../images/_resource/famorenologo.png" alt="logo">
+
+    </a>
+    famoreno - TFEs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Información general
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Líneas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Líneas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../robotica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Robótica móvil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automatización industrial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../vision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visión artificial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../salud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Salud
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../archivo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archivo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descripción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#titulaciones-recomendadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Titulaciones recomendadas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conocimientos-recomendados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conocimientos recomendados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hardware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#te-interesa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Te interesa?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 class="project-title" id="gemelos-digitales-en-godot-de-las-estaciones-del-sistema-fms-200">Gemelos Digitales en Godot de las estaciones del sistema FMS-200<a class="headerlink" href="#gemelos-digitales-en-godot-de-las-estaciones-del-sistema-fms-200" title="Permanent link">&para;</a></h1>
+<div class="project-header">
+        <span class="project-code">AUT-01</span>
+
+        <span class="project-status status-parcial">VARIAS OPCIONES</span>
+
+        <div class="project-header__tags">
+            <span class="project-type">TFG</span>
+            <code>Gemelos digitales</code> <code>Diseño 3D</code> <code>Godot</code> <code>TwinCAT 3</code> <code>ADS</code> <code>FMS-200</code>
+        </div>
+
+        <div class="project-variants project-header__variants">
+<div class="project-variant-name"><span>FMS-201</span></div><span class="project-status status-closed">COMPLETADO</span><div class="project-variant-name"><span>FMS-202</span></div><span class="project-status status-requested">SOLICITADO</span><div class="project-variant-name"><span>FMS-205</span></div><span class="project-status status-free">DISPONIBLE</span><div class="project-variant-name"><span>FMS-206</span></div><span class="project-status status-assigned">ASIGNADO</span><div class="project-variant-name"><span>FMS-208</span></div><span class="project-status status-free">DISPONIBLE</span>
+</div>
+        </div>
+
+<h2 id="descripcion">Descripción<a class="headerlink" href="#descripcion" title="Permanent link">&para;</a></h2>
+<p>Este TFG tiene como finalidad el diseño, desarrollo e implementación de Gemelos Digitales (<em>Digital Twins</em>) interactivos en tiempo real para las estaciones del <a href="../../../../pdf/FMS_200_Descripcion_Funcional.pdf" target="_blank">sistema modular de fabricación flexible SMC FMS-200</a>. Utilizando el motor gráfico Godot Engine y modelos 3D creados en FreeCAD, se construirá una representación tridimensional cinemática del sistema. El entorno virtual se comunicará bidireccionalmente con el PLC físico mediante Beckhoff TwinCAT 3, permitiendo reflejar el estado real de la planta, simular secuencias de control y realizar validaciones sin riesgo para el equipamiento físico.</p>
+<h2 id="objetivos">Objetivos<a class="headerlink" href="#objetivos" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Modelado y simplificación CAD 3D de los componentes mecánicos de las estaciones FMS-200 utilizando FreeCAD.</li>
+<li>Estructuración de la escena y programación de la lógica de animación cinemática e interactividad en Godot Engine.</li>
+<li>Implementación de la pasarela de comunicación en tiempo real entre Godot y TwinCAT 3 (vía protocolo ADS).</li>
+<li>Sincronización bidireccional de señales de E/S (sensores y actuadores) entre el PLC físico y el modelo 3D.</li>
+<li>Ensayos de validación del Gemelo Digital mediante la ejecución de rutinas completas de automatización.</li>
+</ul>
+<h2 id="titulaciones-recomendadas">Titulaciones recomendadas<a class="headerlink" href="#titulaciones-recomendadas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Grado en Ingeniería Electrónica, Robótica y Mecatrónica (GIERM).</li>
+<li>Grado en Ingeniería Electrónica Industrial (GIEI).</li>
+<li>Grado en Ingeniería en Tecnologías Industriales (GITI).</li>
+</ul>
+<h2 id="conocimientos-recomendados">Conocimientos recomendados<a class="headerlink" href="#conocimientos-recomendados" title="Permanent link">&para;</a></h2>
+<p>Se valorarán conocimientos en:</p>
+<ul>
+<li>programación estructurada y orientada a objetos (GDScript en Godot o C#);</li>
+<li>programación de PLCs en TwinCAT 3 y lenguajes IEC 61131-3;</li>
+<li>diseño y modelado 3D paramétrico con FreeCAD;</li>
+<li>comunicaciones industriales.</li>
+</ul>
+<h2 id="software">Software<a class="headerlink" href="#software" title="Permanent link">&para;</a></h2>
+<p><code>Godot Engine</code> <code>TwinCAT 3</code> <code>FreeCAD / Solidworks</code> <code>ADS</code></p>
+<h2 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Estaciones de fabricación flexible SMC FMS-200.</li>
+<li>PLC o controlador industrial Beckhoff (o PC de control compatible).</li>
+<li>Equipo informático para diseño 3D.</li>
+</ul>
+<div class="project-contact">
+<h3 id="te-interesa">¿Te interesa?<a class="headerlink" href="#te-interesa" title="Permanent link">&para;</a></h3>
+<p>Si tienes interés en este trabajo, contáctame por <a href="mailto:famoreno@uma.es?Subject=Interés%20en%20TFE">correo electrónico</a> para comentar el proyecto y valorar su adecuación a tu perfil.</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="tfe-footer">
+  <div class="tfe-footer__inner md-grid">
+
+    <div class="tfe-footer__block tfe-footer__university">
+      <strong>UNIVERSIDAD DE MÁLAGA</strong>
+      <span>Escuela de Ingenierías Industriales</span>
+    </div>
+
+    <div class="tfe-footer__separator"></div>
+
+    <div class="tfe-footer__block tfe-footer__author">
+      <span><strong>Francisco-Ángel Moreno</strong> · PROPUESTAS TFE</span>
+      <span>INGENIERÍA DE SISTEMAS Y AUTOMÁTICA</span>
+    </div>
+
+    <div class="tfe-footer__separator"></div>
+
+    <div class="tfe-footer__block tfe-footer__motto">
+      <span>MAPIR + IMECH.UMA</span>
+      <span>IBIMA + AutoISATeam</span>
+    </div>
+
+    <div class="tfe-footer__separator"></div>
+
+    <div class="tfe-footer__year">
+      (c) 2026.27
+    </div>
+
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.sections", "navigation.top", "navigation.tracking", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../../javascripts/ui-course.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
