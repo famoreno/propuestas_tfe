@@ -2,7 +2,7 @@
 title: Gemelo Digital en Godot de Sistema Ejemplo con Fines Docentes
 order: 5
 type: TFG
-status: disponible
+status: asignado # alberto amores
 keywords:
   - Gemelos digitales
   - Diseño 3D
