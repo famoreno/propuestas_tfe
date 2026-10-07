@@ -2,7 +2,7 @@
 title: Sistema de evaluación motora mediante visión artificial para el seguimiento de alteraciones del movimiento
 order: 1
 type: TFG
-status: interesado
+status: disponible
 cotutor: None
 keywords:
   - Visión artificial
