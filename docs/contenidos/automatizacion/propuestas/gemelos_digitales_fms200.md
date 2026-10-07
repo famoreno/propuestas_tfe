@@ -15,7 +15,7 @@ variants:
   - name: FMS-201
     status: completado
   - name: FMS-202
-    status: solicitado # sofia borregon
+    status: disponible # sofia borregon
   - name: FMS-205
     status: disponible
   - name: FMS-206
