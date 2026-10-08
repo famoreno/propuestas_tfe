@@ -3,6 +3,7 @@ title: Gemelo Digital en Godot de Sistema Ejemplo con Fines Docentes
 order: 5
 type: TFG
 status: asignado # alberto amores
+cotutor: Víctor Torres
 keywords:
   - Gemelos digitales
   - Diseño 3D
@@ -18,7 +19,7 @@ summary: Desarrollo de un gemelo digital de un sistema de ejemplo para fines doc
 
 ## Descripción
 
-Este TFG tiene como finalidad el diseño, desarrollo e implementación de un gemelos digitales (*Digital Twin*) interactivos en tiempo real para un sistema de ejemplo con fines docentes en automatización. Utilizando el motor gráfico Godot Engine y modelos 2D creados, se construirá una representación cinemática del sistema "Carro Básico" y "Carro extendido", dos variantes de complejidad creciente del ejemplo clásico de automatización. El gemelo digital se comunicará bidireccionalmente con un programa de control implementado en Beckhoff TwinCAT 3, permitiendo reflejar el estado real del sistema, simular secuencias de control y realizar validaciones de funcionamiento.
+Este TFG tiene como finalidad el diseño, desarrollo e implementación de un gemelo digital (*Digital Twin*) interactivo en tiempo real para un sistema de ejemplo con fines docentes en automatización. Utilizando el motor gráfico Godot Engine y modelos 2D creados, se construirá una representación cinemática del sistema "Carro Básico" y "Carro extendido", dos variantes de complejidad creciente del ejemplo clásico de automatización. El gemelo digital se comunicará bidireccionalmente con un programa de control implementado en Beckhoff TwinCAT 3, permitiendo reflejar el estado real del sistema, simular secuencias de control y realizar validaciones de funcionamiento.
 
 ## Objetivos
 
