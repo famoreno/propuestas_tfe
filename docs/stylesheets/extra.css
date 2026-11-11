@@ -937,21 +937,26 @@ body {
 
 .archive-table th:nth-child(1),
 .archive-table td:nth-child(1) {
-  width: 3.5rem;
+  width: 2.5rem;
 }
 
 .archive-table th:nth-child(2),
 .archive-table td:nth-child(2) {
-  width: 72%;
+  width: 2.5rem;
 }
 
 .archive-table th:nth-child(3),
 .archive-table td:nth-child(3) {
-  width: 3.5rem;
+  width: 72%;
 }
 
 .archive-table th:nth-child(4),
 .archive-table td:nth-child(4) {
+  width: 3.5rem;
+}
+
+.archive-table th:nth-child(5),
+.archive-table td:nth-child(5) {
   width: 3.5rem;
 }
 
