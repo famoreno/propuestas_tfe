@@ -38,7 +38,7 @@ Propuestas y Trabajos Fin de Estudios de cursos anteriores.
       <td>TFM</td>
       <td>Ciberseguridad OT: detección de anomalías en sistemas SCADA mediante Aprendizaje Automático</td>
       <td>MII</td>
-      <td>TDB</td>
+      <td>9</td>
     </tr>
 
     <tr class="archive-robotica archive-new-year">
